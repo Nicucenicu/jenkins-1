@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Daniel
+  - include:
+      file: db/changelog/changeset/create-geo-table.yaml
+  - include:
+      file: db/changelog/changeset/create-address-table.yaml
+  - include:
+      file: db/changelog/changeset/create-company-table.yaml
+  - include:
+      file: db/changelog/changeset/create-users-table.yaml
+  - include:
+      file: db/changelog/changeset/20221101171130-create-system-users-table.yaml
+  - include:
+      file: db/changelog/changeset/20221101174430-create-roles-table.yaml
+  - include:
+      file: db/changelog/changeset/20221101174630-create-system-users-roles-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-admin-and-user.yaml

@@ -1,0 +1,65 @@
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@keyframes pan {
+  100% {
+    background-position: 15% 50%;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+.form-div {
+  height: 650px;
+  display: grid;
+  background-image: url(../../assets/low-poly-grid-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pan 6s infinite alternate linear;
+}
+.form,
+.form-text {
+  color: aliceblue;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.help-block {
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid rgb(189, 47, 47);
+}
+label {
+  color: white;
+}
+
+.form-button {
+  margin-top: 0.5rem;
+}

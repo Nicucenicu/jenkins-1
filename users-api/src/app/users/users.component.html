@@ -1,0 +1,45 @@
+<div class="loading" *ngIf="isLoading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div class="container">
+  <div class="row">
+    <div
+      class="col-xl-3 col-md-4 col-sm-6 col-8"
+      *ngFor="let user of users | filter: filterTerm; let i = index"
+    >
+      <div
+        class="card"
+        style="width: 18rem; margin-top: 20px; height: 30rem"
+        *ngIf="!isLoading"
+      >
+        <img
+          class="card-img-top card-img"
+          src="{{ face[user.id - 1].url }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ user.name }}</h5>
+          <p class="card-text">
+            {{ user.company.catchPhrase }}
+          </p>
+          <a
+            [routerLink]="['/users', user.name, user.id]"
+            class="btn btn-primary btn-card"
+            >Check bio</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center pagination" *ngIf="!isLoading">
+    <ngb-pagination
+      [collectionSize]="totalItems"
+      [(page)]="page"
+      [pageSize]="itemsPerPage"
+      [maxSize]="5"
+      [rotate]="true"
+      [boundaryLinks]="true"
+      (pageChange)="loadPage($event)"
+    ></ngb-pagination>
+  </div>
+</div>
