@@ -5,10 +5,10 @@ spring:
     database: postgresql
     hibernate:
       ddl-auto: update
-  datasource:
-    url: jdbc:postgresql://localhost:5432/json_faker
-    username: postgres
-    password: postgres
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/json_faker
+#    username: postgres
+#    password: postgres
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -17,15 +17,15 @@ csv:
   filename: "jsonFakerUsers.csv"
 
 server:
-  ssl:
-    # keystore format, could be also JKS
-    key-store-type: PKCS12
-    # The path to the keystore containing the certificatekeystore/baeldung.p12
-    key-store: classpath:keystore/baeldung.p12
-    # password used to generate the certificate
-    key-store-password: daniel
-    key-alias: baeldung
-    enabled: true
+#  ssl:
+#    # keystore format, could be also JKS
+#    key-store-type: PKCS12
+#    # The path to the keystore containing the certificatekeystore/baeldung.p12
+#    key-store: classpath:keystore/baeldung.p12
+#    # password used to generate the certificate
+#    key-store-password: daniel
+#    key-alias: baeldung
+#    enabled: true
   port: 8080
 
 facker:
