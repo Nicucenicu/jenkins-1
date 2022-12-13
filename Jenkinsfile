@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dunivivi-dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('nicu651-dockerhub')
 	}
 
 	stages {
@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t dunivivi/spring-front:latest .'
+				sh 'docker build -t nicu651/spring-front:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push dunivivi/spring-front:latest'
+				sh 'docker push nicu651/spring-front:latest'
 			}
 		}
 	}
