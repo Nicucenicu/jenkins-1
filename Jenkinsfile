@@ -11,28 +11,28 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t nicu651/lab4:latest .'
+				bat 'docker build -t nicu651/lab4:latest .'
 			}
 		}
 
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				bat 'echo %DOCKERHUB_CREDENTIALS_PSW%|docker login -u %DOCKERHUB_CREDENTIALS_USR% --password-stdin'
 			}
 		}
 
 		stage('Push') {
 
 			steps {
-				sh 'docker push nicu651/lab4:latest'
+				bat 'docker push nicu651/lab4:latest'
 			}
 		}
 	}
 
 	post {
 		always {
-			sh 'docker logout'
+			bat 'docker logout'
 		}
 	}
 
