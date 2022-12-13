@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				bat 'docker build -t nicu651/lab4:latest .'
+				bat 'docker build -t nicu651/lab4:latest ./users-api'
 			}
 		}
 
