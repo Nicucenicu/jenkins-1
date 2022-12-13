@@ -22,7 +22,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
   users-api:
-    image: 'dunivivi/frontend:latest'
+    image: 'nicu651/lab3:latest'
     ports:
       - 4200:80
     links:

@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t nicu651/spring-front:latest .'
+				sh 'docker build -t nicu651/lab3:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push nicu651/spring-front:latest'
+				sh 'docker push nicu651/lab3:latest'
 			}
 		}
 	}
